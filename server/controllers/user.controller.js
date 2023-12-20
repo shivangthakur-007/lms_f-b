@@ -11,7 +11,7 @@ const cookieOptions = {
   secure: true,
 };
 
-const register = async (req, res, next) => {
+const register = async (req, res, next) => {  
   const { fullName, email, password } = req.body;
   if (!fullName || !email || !password) {
     return next(new appError("All fields are required", 400));
@@ -77,7 +77,7 @@ const register = async (req, res, next) => {
     success: true,
     message: "User registerd successfully",
     user,
-  });
+  }); 
 };
 
 const login = async (req, res, next) => {

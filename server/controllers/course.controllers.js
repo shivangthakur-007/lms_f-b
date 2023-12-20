@@ -20,9 +20,10 @@ const createCourses = async (req, res, next) => {
   try {
     const { title, description, category, createdBy } = req.body;
 
-    if (!title || !description || !category || !createdBy) {
-      return next(new appError("All fields are required", 400));
-    }
+    // if (!title || !description || !category || !createdBy) {
+    //   return next(new appError("All fields are required", 400));
+    // }
+    
     const course = await Course.create({
       title,
       description,
@@ -30,7 +31,7 @@ const createCourses = async (req, res, next) => {
       createdBy,
       thumbnail: {
         public_id: "Dummy",
-        secure_url: "Dummy",
+        secure_url: "Dummy",  
       },
     });
 
@@ -39,12 +40,12 @@ const createCourses = async (req, res, next) => {
     }
 
     console.log("result>", JSON.stringify(req.file));
-    if (req.file) {
+    if (req.file) { 
       try {
         const result = await cloudinary.v2.uploader.upload(req.file.path, {
           folder: "lms",
         });
-        if (result) {
+        if (result) { 
           course.thumbnail.public_id = result.public_id;
           course.thumbnail.secure_url = result.secure_url;
         }

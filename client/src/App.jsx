@@ -14,6 +14,7 @@ import RequireAuth from "./Components/Auth/RequireAuth";
 import CreateCourse from "./Pages/Course/createCourse";
 import Profile from "./Pages/User/Profile";
 import EditProfile from "./Pages/User/EditProfile";
+
 function App() {
 
   

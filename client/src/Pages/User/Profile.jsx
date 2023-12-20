@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Profile() {
   const dispatch = useDispatch();
   const userData = useSelector((state) => state?.auth?.data);
-
+  
   return (
     <HomeLayouts>
       <div className="min-h-[90vh] flex items-center justify-center ">

@@ -17,6 +17,7 @@ export const contactUs = async (req, res, next) => {
     return next(new appError("Name, Email, Message are required", 400));
   }
 
+
   try {
     const subject = "Contact Us Form";
     const textMessage = `${name} - ${email} <br /> ${message}`;
