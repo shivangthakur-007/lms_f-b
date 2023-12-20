@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const Base_Url= 'http://localhost:5014/api/vi';
+const Base_Url = "https://lms-new-server.onrender.com/api/vi";
 
 const axiosInstance= axios.create();
 
