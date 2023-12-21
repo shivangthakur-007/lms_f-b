@@ -53,6 +53,7 @@ function  Login() {
                     name="email"
                     id="email"
                     placeholder="Enter your email.."
+                    autoComplete="on"
                     className="bg-transparent px-2 py-1 border"
                     onChange={handleUserInput}
                     value={loginData.email}
@@ -69,6 +70,7 @@ function  Login() {
                     className="bg-transparent px-2 py-1 border"
                     onChange={handleUserInput}
                     value={loginData.password}
+                    autoComplete="on"
                 />
             </div>
             <button type="submit" className="mt-2 bg-yellow-600 hover:bg-yellow-500 transition-all ease-in-out duration-300 rounded-sm py-2 font-semibold text-lg cursor-pointer">

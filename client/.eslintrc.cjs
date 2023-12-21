@@ -10,7 +10,12 @@ module.exports = {
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parserOptions: { ecmaVersion: "latest", sourceType: "module" },
   settings: { react: { version: "18.2" } },
-  plugins: ["react-refresh", "simple-import-sort"],
+  plugins: [
+    "react-refresh",
+    "simple-import-sort",
+    "@typescript-eslint",
+    "import",
+  ],
   rules: {
     "simple-import-sort/imports": "error",
     "react/prop-types": "off",
